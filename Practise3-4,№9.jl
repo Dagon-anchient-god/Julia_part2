@@ -1,9 +1,8 @@
-function myreverse!(A)
-    a=firstindex(A)
-    b=lastindex(A)
-    count=0
-    while (a<b)
-        A[a+count],A[b+count]=A[b+count],A[a+count]
-        count+=1
-    end   
+function reverse_user!(A)
+    for i in firstindex(A):lastindex(A)÷2
+        A[i],A[lastindex(A)-i+1]=A[lastindex(A)-i+1],A[i]
+    end
+    return A
 end
+
+

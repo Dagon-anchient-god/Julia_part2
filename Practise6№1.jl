@@ -18,7 +18,7 @@ function merge(A,B)
             flag1=1
         end
 
-        while j<=length(B)  && B[j]<=A[i]
+        while j<=length(B)  && B[j]<A[i]
             C[z]=B[j]
             j=j+1
             z=z+1
@@ -69,7 +69,7 @@ function merge2(A,B)
             flag1=1
         end
 
-        while j<=length(B)  && B[j]<=A[i]
+        while j<=length(B)  && B[j]<A[i]
             push!(C,B[j])
             j=j+1
             z=z+1
@@ -121,7 +121,7 @@ function merge!(A,B,C)
         end
 
 
-        while  j<=length(B)  && B[j]<=A[i]
+        while  j<=length(B)  && B[j]<A[i]
             C[z]=B[j]
             j=j+1
             z=z+1

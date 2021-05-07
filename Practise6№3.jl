@@ -3,7 +3,7 @@ function sortb(A,b)
     j=1
     l=lastindex(A)
     while j<l
-        while A[i]>b
+        while A[i]>b && j<l
             if A[i]>b 
                 A[l],A[i]=A[i],A[l]
                 l=l-1

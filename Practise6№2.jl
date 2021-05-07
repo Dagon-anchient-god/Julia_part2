@@ -46,7 +46,7 @@ function minsort3(A,b)
     l=lastindex(A)
     k=2
     while k<l
-        while A[i]>=b
+        while A[i]>=b && k<l
             if A[i]==b
                 A[k],A[i]=A[i],A[k]
                 k=k+1

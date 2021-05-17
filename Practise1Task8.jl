@@ -1,14 +1,7 @@
-function nummax(A)
-    max=A[firstindex(A)]
-    count = 1
-    for i in firstindex(A)+1:lastindex(A)
-        if max==A[i]
-            count+=1
-        end
-        if A[i]>max
-            max=A[i]
-            count=1
-        end
+insertsort!(A)=reduce(1:length(A))do _, k 
+    while k>1 && A[k-1] > A[k]
+        A[k-1], A[k] = A[k], A[k-1]
+        k-=1
     end
-    return count
+    return A
 end
